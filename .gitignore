@@ -77,6 +77,7 @@ node_modules/
 package-lock.json
 .eslintrc.js
 style.css
+sass/style.css.map
 
 # Misc files #
 ########################
