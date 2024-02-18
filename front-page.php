@@ -46,7 +46,6 @@ get_header();
 		<figure class="wp-block-image size-large">
 			<img src="https://emilyhe.ca/school/wp-content/uploads/2024/02/team-meeting-presenter-1024x682.jpg"
 				alt="team-meeting-presenter" class="wp-image-25" />
-			<!-- <figcaption class="wp-element-caption">team-meeting-presenter</figcaption> -->
 		</figure>
 
 		<section class="home-school">
