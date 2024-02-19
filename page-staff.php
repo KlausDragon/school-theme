@@ -18,11 +18,11 @@ get_header();
 <main id="primary" class="site-main">
 
 	<header class="staff-page-header">
-		<h2 class="staff-entry-title">Our Staff</h2>
+		<h1 class="staff-entry-title">Our Staff</h1>
 	</header><!-- .page-header -->
 
 	<section class="staff-entry-content">
-		<!-- There was no requirement to output the entry content as acf fields... -->
+		<!-- There was no requirement to output the entry content as ACF fields... -->
 		<p>
 			Our dedicated staff is here to help our students succeed. With years of experience and a passion for
 			teaching, our faculty and administrative team are committed to providing the support and guidance needed for
