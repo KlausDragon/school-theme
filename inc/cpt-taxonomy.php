@@ -27,6 +27,7 @@ function fwd_register_custom_post_types() {
         'set_featured_image'    => __( 'Set Student featured image'),
         'remove_featured_image' => __( 'Remove Student featured image'),
         'use_featured_image'    => __( 'Use as featured image'),
+        'placeholder'           => __( 'Add student name' ), 
     );
 
     $args = array(
@@ -66,6 +67,7 @@ function fwd_register_custom_post_types() {
         'parent_item_colon'  => __( 'Parent Staff:' ),
         'not_found'          => __( 'No Staff found.' ),
         'not_found_in_trash' => __( 'No Staff found in Trash.' ),
+        'placeholder'        => __( 'Add staff name' ), 
     );
 
     $args = array(
@@ -82,7 +84,7 @@ function fwd_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 7,
         'menu_icon'          => 'dashicons-businesswoman',
-        'supports'           => array( 'title', 'editor' ),
+        'supports'           => array( 'title' ),
         'template'           => array( array( 'core/quote' ) ),
     );
 
