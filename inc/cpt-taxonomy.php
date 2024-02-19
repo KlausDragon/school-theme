@@ -47,7 +47,7 @@ function fwd_register_custom_post_types()
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-universal-access',
-        'supports'           => array('title'),
+        'supports'           => array('title', 'thumbnail'),
     );
 
     register_post_type('school-student', $args);
