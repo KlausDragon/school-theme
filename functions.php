@@ -55,6 +55,8 @@ function school_theme_bcit_setup()
 	register_nav_menus(
 		array(
 			'header' => esc_html__('Header menu', 'school-theme-bcit'),
+			'footer-left' => esc_html__('Footer - Left Side', 'school-theme-bcit'),
+			'footer-right' => esc_html__('Footer - Right Side', 'school-theme-bcit'),
 		)
 	);
 
@@ -72,6 +74,7 @@ function school_theme_bcit_setup()
 			'caption',
 			'style',
 			'script',
+			'navigation-widgets',
 		)
 	);
 
