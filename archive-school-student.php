@@ -31,6 +31,17 @@ get_header();
                 <?php if ($student_description = get_field('student_description')) : ?>
                     <p><?php echo school_theme_bcit_custom_acf_excerpt($student_description); ?></p>
                 <?php endif; ?>
+                <?php
+                $terms = get_the_terms($post->ID, 'school-student-category');
+                if ($terms && !is_wp_error($terms)) {
+                    $term = $terms[0];
+                    $term_link = get_term_link($term);
+                    if (!is_wp_error($term_link)) {
+                        echo '<p>Specialty: <a href="' . esc_url($term_link) . '">' . esc_html($term->name) . '</a></p>';
+                    }
+                }
+                ?>
+
             </article>
     <?php
         }
