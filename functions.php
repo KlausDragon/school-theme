@@ -192,6 +192,7 @@ if (defined('JETPACK__VERSION')) {
  */
 require get_template_directory() . '/inc/cpt-taxonomy.php';
 
+// Custom Excerpt for ACF
 function school_theme_bcit_custom_acf_excerpt($content)
 {
 	$excerpt_length = apply_filters('excerpt_length', 25);
