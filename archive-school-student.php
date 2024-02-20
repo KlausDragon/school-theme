@@ -1,14 +1,6 @@
 <?php
-
-/**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package School_Theme_BCIT
- */
-
 get_header();
+
 ?>
 
 <main id="primary" class="site-main">
@@ -36,10 +28,9 @@ get_header();
                     <h2><?php the_title(); ?></h2>
                     <?php the_post_thumbnail('medium'); ?>
                 </a>
-                <?php if (get_field('student_description')) : ?>
-                    <p><?php the_field('student_description'); ?></p>
+                <?php if ($student_description = get_field('student_description')) : ?>
+                    <p><?php echo school_theme_bcit_custom_acf_excerpt($student_description); ?></p>
                 <?php endif; ?>
-                <?php the_excerpt(); ?>
             </article>
     <?php
         }
@@ -51,4 +42,5 @@ get_header();
 </main><!-- #main -->
 
 <?php
+
 get_footer();

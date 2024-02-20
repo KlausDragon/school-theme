@@ -37,7 +37,6 @@
         the_content(
             sprintf(
                 wp_kses(
-                    /* translators: %s: Name of current post. Only visible to screen readers */
                     __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'school-theme-bcit'),
                     array(
                         'span' => array(
@@ -48,6 +47,12 @@
                 wp_kses_post(get_the_title())
             )
         );
+
+        if (get_field('student_description')) : ?>
+            <div class="student-description">
+                <?php the_field('student_description'); ?>
+            </div>
+        <?php endif;
 
         wp_link_pages(
             array(
