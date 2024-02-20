@@ -183,3 +183,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Custom Post Types & Taxonomies
  */
 require get_template_directory() . '/inc/cpt-taxonomy.php';
+
+
+// Change exerpt length to 20 words
+function bcit_exerpt_length($length)
+{
+	return 25;
+}
+add_filter('excerpt_length', 'bcit_exerpt_length', 999);
+
+// // Change excerpt more text for posts
+// function student_exerpt_more($more)
+// {
+// 	return '... <a class="read-more" href="' . esc_url(get_permalink()) . '">Read More about the Student</a>';
+// }
+// add_filter('excerpt_more', 'student_exerpt_more', 999);
+
+function news_exerpt_more($more)
+{
+	return '... <p>[...]</p>';
+}
+add_filter('excerpt_more', 'news_exerpt_more', 999);
