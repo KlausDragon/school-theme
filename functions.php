@@ -211,6 +211,12 @@ function school_theme_bcit_custom_acf_excerpt($content)
 
 function school_theme_bcit_custom_excerpt_length($length)
 {
-	return 50; 
+	return 50;
 }
 add_filter('excerpt_length', 'school_theme_bcit_custom_excerpt_length');
+
+function aos_fade_in()
+{
+	wp_enqueue_script('aos', get_template_directory_uri() . '/js/aos.js', array(), _S_VERSION, true);
+}
+add_action('wp_enqueue_scripts', 'aos_fade_in');
