@@ -23,11 +23,12 @@
 			);
 			?>
 		</nav>
-		<div class+"credits">
+		<div class="credits">
 			<h3>Credits</h3>
-			<!-- <span class="sep"> | </span> -->
 			<?php
-			printf(esc_html__('Created by %1$s.', 'school-theme-bcit'), '<a href="https://emilyhe.ca/school">Ali A, Emily He</a>');
+			printf('<p>' . esc_html__('Created by %1$s.', 'school-theme-bcit') . '</p>', '<strong><a href="https://emilyhe.ca/school">Ali A, Emily He</a></strong>');
+			printf('<p>' . esc_html__('Photos courtesy of %1$s.', 'school-theme-bcit') . '</p>', '<strong><a href="https://burst.shopify.com/">Burst</a></strong>');
+			printf('<p>' . esc_html__('Content courtesy of %1$s.', 'school-theme-bcit') . '</p>', '<strong><a href="https://chat.openai.com/">ChatGPT</a></strong>');
 			?>
 		</div>
 		<nav class="footer-navigation">
