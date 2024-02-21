@@ -13,7 +13,7 @@
 
 <footer id="colophon" class="site-footer">
 	<div class="footer-menus">
-		<nav class="footer-navigation">
+		<nav class="footer-navigation-left">
 			<?php
 			wp_nav_menu(
 				array(
@@ -31,7 +31,7 @@
 			printf('<p>' . esc_html__('Content courtesy of %1$s.', 'school-theme-bcit') . '</p>', '<strong><a href="https://chat.openai.com/">ChatGPT</a></strong>');
 			?>
 		</div>
-		<nav class="footer-navigation">
+		<nav class="footer-navigation-right">
 			<h3>Links</h3>
 			<?php
 			wp_nav_menu(
