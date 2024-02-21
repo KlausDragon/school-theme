@@ -22,8 +22,14 @@
 				)
 			);
 			?>
-			<!-- <a href="<?php echo esc_url(get_privacy_policy_url()); ?>">Privacy Policy</a>	 -->
 		</nav>
+		<div class+"credits">
+			<h3>Credits</h3>
+			<!-- <span class="sep"> | </span> -->
+			<?php
+			printf(esc_html__('Created by %1$s.', 'school-theme-bcit'), '<a href="https://emilyhe.ca/school">Ali A, Emily He</a>');
+			?>
+		</div>
 		<nav class="footer-navigation">
 			<h3>Links</h3>
 			<?php
@@ -35,17 +41,6 @@
 			);
 			?>
 		</nav>
-		<a href="<?php echo esc_url(__('https://wordpress.org/', 'school-theme-bcit')); ?>">
-			<?php
-			/* translators: %s: CMS name, i.e. WordPress. */
-			printf(esc_html__('Proudly powered by %s', 'school-theme-bcit'), 'WordPress');
-			?>
-		</a>
-		<span class="sep"> | </span>
-		<?php
-		/* translators: 1: Theme name, 2: Theme author. */
-		printf(esc_html__('Theme: %1$s by %2$s.', 'school-theme-bcit'), 'school-theme-bcit', '<a href="https://emilyhe.ca/school">Ali A, Emily He</a>');
-		?>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
