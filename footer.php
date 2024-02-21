@@ -25,6 +25,7 @@
 			<!-- <a href="<?php echo esc_url(get_privacy_policy_url()); ?>">Privacy Policy</a>	 -->
 		</nav>
 		<nav class="footer-navigation">
+			<h3>Links</h3>
 			<?php
 			wp_nav_menu(
 				array(
@@ -34,8 +35,6 @@
 			);
 			?>
 		</nav>
-	</div><!-- .footer-menus -->
-	<div class="site-info">
 		<a href="<?php echo esc_url(__('https://wordpress.org/', 'school-theme-bcit')); ?>">
 			<?php
 			/* translators: %s: CMS name, i.e. WordPress. */
