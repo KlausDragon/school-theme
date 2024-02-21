@@ -26,7 +26,7 @@ get_header();
             <article>
                 <a href="<?php the_permalink(); ?>">
                     <h2><?php the_title(); ?></h2>
-                    <?php the_post_thumbnail('medium'); ?>
+                    <?php the_post_thumbnail('student-image'); ?>
                 </a>
                 <?php if ($student_description = get_field('student_description')) : ?>
                     <p><?php echo school_theme_bcit_custom_acf_excerpt($student_description); ?></p>

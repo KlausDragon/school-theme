@@ -30,7 +30,7 @@
         <?php endif; ?>
     </header><!-- .entry-header -->
 
-    <?php school_theme_bcit_post_thumbnail(); ?>
+    <?php school_theme_bcit_post_thumbnail('student-image'); ?>
 
     <div class="entry-content">
         <?php

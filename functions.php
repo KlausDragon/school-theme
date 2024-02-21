@@ -50,6 +50,7 @@ function school_theme_bcit_setup()
 
 	add_image_size('latest-blog-teaser', 300, 200, true);
 
+	add_image_size('student-image', 200, 300, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(

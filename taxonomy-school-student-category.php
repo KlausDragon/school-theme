@@ -22,7 +22,7 @@ get_header();
             <article>
                 <a href="<?php the_permalink(); ?>">
                     <h2><?php the_title(); ?></h2>
-                    <?php the_post_thumbnail('medium'); ?>
+                    <?php the_post_thumbnail('student-image'); ?>
                 </a>
                 <?php if (get_field('student_description')) : ?>
                     <div class="student-description">
