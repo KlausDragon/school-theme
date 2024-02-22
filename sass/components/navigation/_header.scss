@@ -5,11 +5,17 @@ header.site-header  {
     background-color: #000000;
     border-top: 3px solid #305c9f;
     position: fixed;
-    top: 0;
+    top: 10;
     left: 0;
     z-index: 1000;
     color: #fff;
 
+    .main-navigation li.current-menu-item > a, 
+    .main-navigation li.current_page_item > a, 
+    .main-navigation li:hover > a, 
+    .main-navigation li.focus > a {
+        background-color: #305c9f;
+    }
     // #1
     .site-header .site-title {
         width: 200px;
@@ -81,7 +87,7 @@ header.site-header  {
     }
     
     .main-navigation a {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
         display: block;
         font-size: 0.9em;
         text-decoration: none;
@@ -106,11 +112,12 @@ header.site-header  {
     .main-navigation ul.sub-menu {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
     }
     
     .main-navigation ul.sub-menu li{
         align-self: center;
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -142,14 +149,20 @@ header.site-header  {
             display: none;
         }
 
-
         .main-navigation ul {
             display: block;
         }
 
+        .main-navigation ul ul a {
+            left: -999em;
+            top: 0;
+            width: 200px;
+            text-align: center;
+        }
+
         .main-navigation ul, .main-navigation.toggled ul {
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
         }
     }
 }

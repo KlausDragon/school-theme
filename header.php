@@ -43,30 +43,31 @@
 				<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
 						<?php bloginfo('name'); ?>
 					</a></p>
-					<?php
+				<?php
 			endif;
 			$school_theme_bcit_description = get_bloginfo('description', 'display');
 			if ($school_theme_bcit_description || is_customize_preview()):
 				?>
-					<p class="site-description">
-						<?php echo $school_theme_bcit_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-							?>
-					</p>
-				<?php endif; ?>
+				<p class="site-description">
+					<?php echo $school_theme_bcit_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+						?>
+				</p>
+			<?php endif; ?>
 
-				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-							<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"></path>
-						</svg>
-					</button>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id' => 'primary-menu',
-						)
-					);
-					?>
-				</nav><!-- #site-navigation -->
+			<nav id="site-navigation" class="main-navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" fill="#ffffff"></path>
+					</svg>
+
+				</button>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id' => 'primary-menu',
+					)
+				);
+				?>
+			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->
