@@ -46,6 +46,7 @@ get_header();
 
 		<section class="home-school">
 
+		<div class="home-left-right-container">
 			<section class="home-left">
 				<?php
 				if (function_exists('get_field')) {
@@ -79,6 +80,7 @@ get_header();
 				}
 				?>
 			</section>
+		</div>
 
 			<figure class="wp-block-image size-large">
 				<img src="https://emilyhe.ca/school/wp-content/uploads/2024/02/drawing-wireframes-1-1024x682.jpg"
@@ -119,7 +121,6 @@ get_header();
 						while ($blog_query->have_posts()) {
 							$blog_query->the_post();
 							?>
-
 							<article class="blog-article">
 								<a href="<?php the_permalink(); ?>">
 									<?php
@@ -133,15 +134,13 @@ get_header();
 									</h4>
 								</a>
 							</article>
-
 							<?php
 						}
 					}
 					wp_reset_postdata();
 					?>
-
-					<a href="<?php echo esc_url(__('https://emilyhe.ca/school/news', 'school')); ?>">See all News</a>
 				</div>
+				<a class="see-all-news-link" href="<?php echo esc_url(__('https://emilyhe.ca/school/news', 'school')); ?>">See all News</a>
 			</section>
 
 			<?php

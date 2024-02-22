@@ -382,6 +382,9 @@ body {
 	background-color: #fff;
 	margin: 0;
 }
+body p {
+	line-height: 2rem;
+}
 
 .site {
 	max-width: 2200px;
@@ -759,7 +762,7 @@ header.site-header {
 	background-color: #000000;
 	border-top: 3px solid #305c9f;
 	position: fixed;
-	top: 0;
+	top: 10;
 	left: 0;
 	z-index: 9999;
 }
@@ -1035,8 +1038,57 @@ header.site-header .main-navigation ul ul a {
 /*--------------------------------------------------------------
 # Pages & Posts
 --------------------------------------------------------------*/
+main.homepage .site-main {
+	padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
 section.home-top {
-	margin-top: 3rem;
-	padding-top: 2rem;
+	margin: 2rem;
+}
+
+div.home-left-right-container {
+	margin: 1rem;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+article.blog-article {
+	margin: 0 1rem;
+}
+
+section.home-bottom {
+	margin: 2rem;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+section.home-news {
+	margin: 2rem;
+}
+
+@media screen and (min-width: 50em) {
+	div.home-left-right-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "left right";
+	}
+	section.home-left {
+		grid-area: left;
+		padding: 0.8rem;
+		text-align: center;
+	}
+	section.home-left p {
+		margin-top: 4rem;
+	}
+	section.home-right {
+		grid-area: right;
+		padding: 0.8rem;
+		text-align: center;
+	}
+	div.home-news-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 }
 /*# sourceMappingURL=sass/style.css.map */

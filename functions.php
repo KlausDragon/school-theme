@@ -220,3 +220,21 @@ function aos_fade_in()
 	wp_enqueue_script('aos', get_template_directory_uri() . '/js/aos.js', array(), _S_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'aos_fade_in');
+
+
+// changing placeholder test for staff...
+function custom_staff_title_placeholder($title_placeholder, $post) {
+    if ($post->post_type === 'school-staff') {
+        $title_placeholder = 'Add staff name...';
+    }
+    return $title_placeholder;
+}
+add_filter('enter_title_here', 'custom_staff_title_placeholder', 10, 2);
+
+function custom_student_title_placeholder($title_placeholder, $post) {
+    if ($post->post_type === 'school-student') {
+        $title_placeholder = 'Add student name...';
+    }
+    return $title_placeholder;
+}
+add_filter('enter_title_here', 'custom_student_title_placeholder', 10, 2);
