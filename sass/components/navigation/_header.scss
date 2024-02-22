@@ -15,19 +15,15 @@ header.site-header  {
     .main-navigation li:hover > a, 
     .main-navigation li.focus > a {
         background-color: #305c9f;
+        // padding: 1rem 0;
     }
+
     // #1
     .site-header .site-title {
         width: 200px;
         font-size: 1.3em;
         text-transform: uppercase;
-        margin: 0.4rem 1rem 0;
-
-        a, a:visited {
-            color: #003c71;
-            text-decoration: none;
-            font-weight: 700;
-        }
+        margin: 0.4rem 1rem 0;      
 
         a {
             background-color: transparent;
@@ -82,12 +78,16 @@ header.site-header  {
         background-color: #000000;
     }
 
+    .main-navigation li {
+        position: relative;
+    }
+
     .main-navigation.toggled ul {
         display: block;
     }
     
     .main-navigation a {
-        padding: 0 1rem;
+        padding: 1rem;
         display: block;
         font-size: 0.9em;
         text-decoration: none;
@@ -96,28 +96,19 @@ header.site-header  {
         color: white;
         text-transform: uppercase;
     }
-    
-    .main-navigation ul ul {
+
+    .main-navigation.toggled ul {
         display: block;
+    }
+
+    .main-navigation ul ul {
         background-color: #3d3d3d;
         width: 100%;
         text-align: center;
-        align-items: center;
-    }
-    
-    .main-navigation li {
-        position: relative;
-    }
 
-    .main-navigation ul.sub-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    
-    .main-navigation ul.sub-menu li{
-        align-self: center;
-        text-align: left;
+        a {
+            width: auto;
+        }
     }
 }
 
@@ -126,43 +117,114 @@ header.site-header  {
         display: grid;
         grid-template-columns: 1fr minmax(auto, 12.5rem) minmax(auto, 50rem) 1fr;
         align-items: center;
-        grid-template-areas: 
-            ". title navigation .";
-
+        // grid-template-areas: 
+        //     ". title navigation .";
+    
         .site-title {
-            grid-area: title;
+            // grid-area: title;
+            grid-column: 2/3;
             margin: 0 3rem;
         }
-
+    
         nav.main-navigation#site-navigation {
-            grid-area: navigation;
-            width: auto;
+            // grid-area: navigation;
+            grid-column: 3/4;
             position: relative;
             top: 0;
             align-self: center;
             margin-left: auto;
             height: 52px;
             line-height: 52px;
+            width: auto;
         }
 
-        .menu-toggle {
+        button.menu-toggle {
             display: none;
         }
 
-        .main-navigation ul {
-            display: block;
+        .main-navigation ul, .main-navigation.toggled ul {
+            display: flex;
+            justify-content: end;
+
+            li:hover > ul, 
+            li.focus > ul {
+                left: auto;
+            }
+
+        }
+
+        .main-navigation a {
+            padding: 0 1rem;
+        }
+
+        .main-navigation ul ul {
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+            float: left;
+            position: absolute;
+            top: 100%;
+            left: -999em;
+            z-index: 99999;
+            background-color: #111;
+            flex-direction: column;
+            width: auto;
         }
 
         .main-navigation ul ul a {
             left: -999em;
             top: 0;
             width: 200px;
-            text-align: center;
+            text-align: left;
         }
+    
 
-        .main-navigation ul, .main-navigation.toggled ul {
-            display: flex;
-            justify-content: flex-end;
-        }
+
+        
+        
+        
+        
+        
+        // grid-template-areas: 
+        //     ". title navigation .";
+    
+        // .site-title {
+        //     grid-area: title;
+        //     margin: 0 3rem;
+        // }
+    
+        // nav.main-navigation#site-navigation {
+        //     grid-area: navigation;
+        //     width: auto;
+        //     position: relative;
+        //     top: 0;
+        //     align-self: center;
+        //     margin-left: auto;
+        //     height: 52px;
+        //     line-height: 52px;
+        // }
+    
+        // .menu-toggle {
+        //     display: none;
+        // }
+    
+        // .main-navigation ul {
+        //     display: block;
+        // }
+    
+        // .main-navigation ul ul a {
+        //     left: -999em;
+        //     top: 0;
+        //     width: 200px;
+        //     text-align: center;
+        // }
+    
+        // .main-navigation ul, .main-navigation.toggled ul {
+        //     display: flex;
+        //     justify-content: flex-end;
+        // }
+
+
     }
+
+
+
 }
