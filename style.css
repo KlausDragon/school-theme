@@ -79,6 +79,7 @@ body {
  */
 main {
 	display: block;
+	margin-top: 4.5rem;
 }
 
 /**
@@ -389,6 +390,7 @@ body {
 	display: grid;
 	grid-template-columns: 1fr minmax(0, 1000px) 1fr;
 	grid-template-areas: "header header header" ". main ." ". sidebar ." "footer footer footer";
+	background-color: #fff;
 }
 
 header.site-header#masthead {
@@ -397,6 +399,7 @@ header.site-header#masthead {
 
 main.site-main#primary {
 	grid-area: main;
+	margin-top: 4.5rem;
 }
 
 .site-footer {
@@ -756,10 +759,9 @@ header.site-header {
 	background-color: #000000;
 	border-top: 3px solid #305c9f;
 	position: fixed;
-	top: 10;
+	top: 0;
 	left: 0;
-	z-index: 1000;
-	color: #fff;
+	z-index: 9999;
 }
 header.site-header .main-navigation li.current-menu-item > a,
 header.site-header .main-navigation li.current_page_item > a,
@@ -872,7 +874,7 @@ header.site-header .main-navigation ul ul a {
 	}
 	header.site-header .main-navigation ul, header.site-header .main-navigation.toggled ul {
 		display: flex;
-		justify-content: end;
+		justify-content: flex-end;
 	}
 	header.site-header .main-navigation ul li:hover > ul,
 	header.site-header .main-navigation ul li.focus > ul, header.site-header .main-navigation.toggled ul li:hover > ul,
@@ -1033,4 +1035,8 @@ header.site-header .main-navigation ul ul a {
 /*--------------------------------------------------------------
 # Pages & Posts
 --------------------------------------------------------------*/
+section.home-top {
+	margin-top: 3rem;
+	padding-top: 2rem;
+}
 /*# sourceMappingURL=sass/style.css.map */

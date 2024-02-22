@@ -16,24 +16,26 @@ body {
 }
 
 .site {
-    max-width: 2200px;
+	max-width: 2200px;
     margin: 0 auto;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr minmax(0, 1000px) 1fr;
     grid-template-areas:
-        "header header header"
-        ". main ."
-        ". sidebar ."
-        "footer footer footer";
+	"header header header"
+	". main ."
+	". sidebar ."
+	"footer footer footer";
+	background-color: #fff;
 }
 
 header.site-header#masthead {
-    grid-area: header;
+	grid-area: header;
 }
 
 main.site-main#primary {
 	grid-area: main;
+	margin-top: 4.5rem;
 }
 
 .site-footer {
