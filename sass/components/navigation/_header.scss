@@ -13,9 +13,10 @@ header.site-header  {
     .main-navigation li.current-menu-item > a, 
     .main-navigation li.current_page_item > a, 
     .main-navigation li:hover > a, 
-    .main-navigation li.focus > a {
+    .main-navigation li.focus > a,
+    .main-navigation li:active > a 
+    {
         background-color: #305c9f;
-        // padding: 1rem 0;
     }
 
     // #1
@@ -117,17 +118,13 @@ header.site-header  {
         display: grid;
         grid-template-columns: 1fr minmax(auto, 12.5rem) minmax(auto, 50rem) 1fr;
         align-items: center;
-        // grid-template-areas: 
-        //     ". title navigation .";
     
         .site-title {
-            // grid-area: title;
             grid-column: 2/3;
             margin: 0 3rem;
         }
     
         nav.main-navigation#site-navigation {
-            // grid-area: navigation;
             grid-column: 3/4;
             position: relative;
             top: 0;
@@ -175,56 +172,7 @@ header.site-header  {
             width: 200px;
             text-align: left;
         }
-    
-
-
-        
-        
-        
-        
-        
-        // grid-template-areas: 
-        //     ". title navigation .";
-    
-        // .site-title {
-        //     grid-area: title;
-        //     margin: 0 3rem;
-        // }
-    
-        // nav.main-navigation#site-navigation {
-        //     grid-area: navigation;
-        //     width: auto;
-        //     position: relative;
-        //     top: 0;
-        //     align-self: center;
-        //     margin-left: auto;
-        //     height: 52px;
-        //     line-height: 52px;
-        // }
-    
-        // .menu-toggle {
-        //     display: none;
-        // }
-    
-        // .main-navigation ul {
-        //     display: block;
-        // }
-    
-        // .main-navigation ul ul a {
-        //     left: -999em;
-        //     top: 0;
-        //     width: 200px;
-        //     text-align: center;
-        // }
-    
-        // .main-navigation ul, .main-navigation.toggled ul {
-        //     display: flex;
-        //     justify-content: flex-end;
-        // }
-
 
     }
-
-
 
 }
