@@ -23,16 +23,12 @@ get_header();
 		?>
 
 		<section class="home-top">
-			<h1>
-				<?php the_title(); ?>
-			</h1>
-			<?php the_post_thumbnail('large'); ?>
 			<?php
 			if (function_exists('get_field')) {
 				if (get_field('top_section_heading')) {
-					echo "<h2>";
+					echo "<h1>";
 					the_field('top_section_heading');
-					echo "</h2>";
+					echo "</h1>";
 				}
 				if (get_field('top_section_content')) {
 					echo "<p>";
@@ -44,8 +40,8 @@ get_header();
 		</section>
 
 		<figure class="wp-block-image size-large">
-			<img src="https://emilyhe.ca/school/wp-content/uploads/2024/02/team-meeting-presenter-1024x682.jpg"
-				alt="team-meeting-presenter" class="wp-image-25" />
+			<img src="https://emilyhe.ca/school/wp-content/uploads/2024/02/team-meeting-1024x683.jpg" alt="team-meeting"
+				class="wp-image-24" />
 		</figure>
 
 		<section class="home-school">

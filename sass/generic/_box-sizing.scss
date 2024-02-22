@@ -27,3 +27,19 @@ body {
         ". sidebar ."
         "footer footer footer";
 }
+
+header.site-header#masthead {
+    grid-area: header;
+}
+
+main.site-main#primary {
+	grid-area: main;
+}
+
+.site-footer {
+    grid-area: footer;
+}
+
+aside.widget-area#secondary {
+    grid-area: sidebar;
+}
