@@ -1266,7 +1266,7 @@ main.index#primary [type=button], main.index#primary [type=reset], main.index#pr
 }
 
 aside.widget-area#secondary {
-  margin: 0 1rem;
+  margin: 2rem;
 }
 aside.widget-area#secondary button.wp-block-search__button wp-element-button,
 aside.widget-area#secondary [type=button], aside.widget-area#secondary [type=reset], aside.widget-area#secondary [type=submit] {
@@ -1299,7 +1299,6 @@ aside.widget-area#secondary #block-6 div.wp-block-group__inner-container ul {
   aside.widget-area#secondary {
     display: flex;
     justify-content: space-between;
-    margin: 1rem 2rem;
   }
   button.wp-block-search__button wp-element-button,
   [type=button], [type=reset], [type=submit] {
@@ -1312,12 +1311,22 @@ aside.widget-area#secondary #block-6 div.wp-block-group__inner-container ul {
     width: 23%;
   }
 }
-main.single#primary {
+main.single#primary,
+main.archive#primary {
   margin-left: 2rem;
   margin-right: 2rem;
 }
-main.single#primary a {
+main.single#primary a,
+main.archive#primary a {
   font-weight: bold;
+}
+main.single#primary .cat-links,
+main.single#primary .tags-links,
+main.single#primary .comments-link,
+main.archive#primary .cat-links,
+main.archive#primary .tags-links,
+main.archive#primary .comments-link {
+  margin: 0 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

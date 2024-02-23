@@ -29,7 +29,7 @@ main.index#primary {
 
 aside.widget-area#secondary {
 
-    margin: 0 1rem;
+    margin: 2rem;
 
     button.wp-block-search__button wp-element-button, 
     [type=button], [type=reset], [type=submit] {
@@ -69,7 +69,6 @@ aside.widget-area#secondary {
     aside.widget-area#secondary {
         display: flex;
         justify-content: space-between;
-        margin: 1rem 2rem;
     }
 
     button.wp-block-search__button wp-element-button, 
@@ -88,13 +87,20 @@ aside.widget-area#secondary {
 }
 
 
-main.single#primary {
+main.single#primary,
+main.archive#primary {
 
     margin-left: 2rem;
     margin-right: 2rem;
 
     a {
         font-weight: bold;
+    }
+
+    .cat-links,
+    .tags-links,
+    .comments-link{
+        margin: 0 .5rem;
     }
 }
 
