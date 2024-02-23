@@ -3,7 +3,7 @@ get_header();
 
 ?>
 
-<main id="primary" class="site-main">
+<main id="primary" class="site-main student-archive">
 
     <header class="page-header">
         <?php
@@ -15,21 +15,29 @@ get_header();
     <?php
     $args = array(
         'post_type' => 'school-student',
-        'posts_per_page' => -1
+        'posts_per_page' => -1,
+        'order' => 'ASC',
+        'orderby' => 'title',
     );
+
     $query = new WP_Query($args);
+
     if ($query->have_posts()) {
-        echo '<section>';
+        echo '<section class="school-students">';
         while ($query->have_posts()) {
             $query->the_post();
-    ?>
-            <article>
+            ?>
+            <article class="individual-student">
                 <a href="<?php the_permalink(); ?>">
-                    <h2><?php the_title(); ?></h2>
+                    <h2>
+                        <?php the_title(); ?>
+                    </h2>
                     <?php the_post_thumbnail('student-image'); ?>
                 </a>
-                <?php if ($student_description = get_field('student_description')) : ?>
-                    <p><?php echo school_theme_bcit_custom_acf_excerpt($student_description); ?></p>
+                <?php if ($student_description = get_field('student_description')): ?>
+                    <p>
+                        <?php echo school_theme_bcit_custom_acf_excerpt($student_description); ?>
+                    </p>
                 <?php endif; ?>
                 <?php
                 $terms = get_the_terms($post->ID, 'school-student-category');
@@ -37,13 +45,12 @@ get_header();
                     $term = $terms[0];
                     $term_link = get_term_link($term);
                     if (!is_wp_error($term_link)) {
-                        echo '<p>Specialty: <a href="' . esc_url($term_link) . '">' . esc_html($term->name) . '</a></p>';
+                        echo '<p class="specialty">Specialty: <strong><a href="' . esc_url($term_link) . '">' . esc_html($term->name) . '</a></strong></p>';
                     }
                 }
                 ?>
-
             </article>
-    <?php
+            <?php
         }
         wp_reset_postdata();
         echo '</section>';

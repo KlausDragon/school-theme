@@ -54,7 +54,7 @@
             </div>
         <?php endif;
 
-        echo '<a href="' . home_url() . '/nonexistent-page">' . get_the_title() . ' Portfolio</a>';
+        echo '<strong><a href="' . home_url() . '/nonexistent-page">' . get_the_title() . ' Portfolio</a></strong>';
         ?>
 
         <div class="category-students">

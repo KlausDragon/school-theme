@@ -46,41 +46,41 @@ get_header();
 
 		<section class="home-school">
 
-		<div class="home-left-right-container">
-			<section class="home-left">
-				<?php
-				if (function_exists('get_field')) {
-					if (get_field('left_section_heading')) {
-						echo "<h2>";
-						the_field('left_section_heading');
-						echo "</h2>";
+			<div class="home-left-right-container">
+				<section class="home-left">
+					<?php
+					if (function_exists('get_field')) {
+						if (get_field('left_section_heading')) {
+							echo "<h2>";
+							the_field('left_section_heading');
+							echo "</h2>";
+						}
+						if (get_field('left_section_heading')) {
+							echo "<p>";
+							the_field('left_section_content');
+							echo "</p>";
+						}
 					}
-					if (get_field('left_section_heading')) {
-						echo "<p>";
-						the_field('left_section_content');
-						echo "</p>";
-					}
-				}
-				?>
-			</section>
+					?>
+				</section>
 
-			<section class="home-right">
-				<?php
-				if (function_exists('get_field')) {
-					if (get_field('right_section_heading')) {
-						echo "<h2>";
-						the_field('right_section_heading');
-						echo "</h2>";
+				<section class="home-right">
+					<?php
+					if (function_exists('get_field')) {
+						if (get_field('right_section_heading')) {
+							echo "<h2>";
+							the_field('right_section_heading');
+							echo "</h2>";
+						}
+						if (get_field('right_section_content')) {
+							echo "<p>";
+							the_field('right_section_content');
+							echo "</p>";
+						}
 					}
-					if (get_field('right_section_content')) {
-						echo "<p>";
-						the_field('right_section_content');
-						echo "</p>";
-					}
-				}
-				?>
-			</section>
-		</div>
+					?>
+				</section>
+			</div>
 
 			<figure class="wp-block-image size-large">
 				<img src="https://emilyhe.ca/school/wp-content/uploads/2024/02/drawing-wireframes-1-1024x682.jpg"
@@ -129,9 +129,9 @@ get_header();
 									<h3>
 										<?php the_title(); ?>
 									</h3>
-									<h4>
+									<p>
 										<?php echo get_the_date('F j, Y'); ?>
-									</h4>
+									</p>
 								</a>
 							</article>
 							<?php
@@ -140,7 +140,12 @@ get_header();
 					wp_reset_postdata();
 					?>
 				</div>
-				<a class="see-all-news-link" href="<?php echo esc_url(__('https://emilyhe.ca/school/news', 'school')); ?>">See all News</a>
+				<strong>
+					<a class="see-all-news-link"
+						href="<?php echo esc_url(__('https://emilyhe.ca/school/news', 'school')); ?>">See all News
+					</a>
+				</strong>
+
 			</section>
 
 			<?php

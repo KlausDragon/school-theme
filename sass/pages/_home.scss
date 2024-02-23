@@ -4,13 +4,9 @@ main.homepage .site-main {
     padding: .5rem 1rem .5rem 1rem;
 }
 
-section.home-top {
-    margin: 2rem;
-}
-
-figure.home-page .wp-image-24 {
-
-}
+// section.home-top {
+//     margin: 2rem; for visual styling feedback avoiding admin bar
+// }
 
 
 div.home-left-right-container{
@@ -22,11 +18,18 @@ div.home-left-right-container{
 
 article.blog-article{
     margin: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #d9d9d9b9;
+    padding: .5rem;
+    a{
+    text-decoration: none;
+    }
 }
 
 section.home-bottom {
     margin: 2rem;
-    text-align: center;
+    text-align: left;
     padding: 1rem 0;
 }
 

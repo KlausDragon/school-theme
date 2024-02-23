@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main">
+<main id="primary" class="site-main staff-page">
 
 	<header class="staff-page-header">
 		<h1 class="staff-entry-title">Our Staff</h1>
@@ -73,7 +73,7 @@ get_header();
 					
 					// Container for admin staff
 					if ($term->slug === 'administrative') {
-						echo '<div class="admin-container">';
+						echo '<section class="admin-container">';
 						echo '<h2>' . esc_html($term->name) . '</h2>';
 
 						while ($query->have_posts()) {
@@ -81,24 +81,24 @@ get_header();
 
 							if (get_field('administrator_biography')) {
 								?>
-								<div>
+								<article class="admin-staff">
 									<h3 id="<?php echo esc_attr(get_the_ID()); ?>">
 										<?php esc_html(the_title()); ?>
 									</h3>
 									<p>
 										<?php echo esc_html(get_field('administrator_biography')); ?>
 									</p>
-								</div>
+								</article>
 								<?php
 							}
 						}
-						echo '</div>';
+						echo '</section>';
 						wp_reset_postdata();
 					}
 
 					// Container for instructor staff
 					if ($term->slug === 'faculty') {
-						echo '<div class="instructor-container">';
+						echo '<section class="instructor-container">';
 						echo '<h2>' . esc_html($term->name) . '</h2>';
 
 						while ($query->have_posts()) {
@@ -106,7 +106,7 @@ get_header();
 
 							if (get_field('instructor_biography') || get_field('instructor_courses') || get_field('instructor_website')) {
 								?>
-								<div>
+								<article class="instructor-staff">
 									<h3 id="<?php echo esc_attr(get_the_ID()); ?>">
 										<?php esc_html(the_title()); ?>
 									</h3>
@@ -118,14 +118,14 @@ get_header();
 									</p>
 									<p>
 										<a href="<?php echo esc_url(get_field('instructor_website')); ?>">
-											<?php echo esc_url(get_field('instructor_website')); ?>
+											<strong>Instrucor Website</strong>
 										</a>
 									</p>
-								</div>
+								</article>
 								<?php
 							}
 						}
-						echo '</div>';
+						echo '</section>';
 						wp_reset_postdata();
 					}
 				}

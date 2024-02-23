@@ -201,7 +201,7 @@ function school_theme_bcit_custom_acf_excerpt($content)
 	if (count($words) > $excerpt_length) {
 		array_pop($words);
 		$excerpt = implode(' ', $words) . '... ';
-		$read_more_link = '<a href="' . get_permalink() . '">' . apply_filters('excerpt_more', __('Read More about the Student', 'school-theme-bcit')) . '</a>';
+		$read_more_link = '<a href="' . get_permalink() . '">' . apply_filters('excerpt_more', __('<strong>Read More about the Student</strong>', 'school-theme-bcit')) . '</a>';
 		$excerpt .= $read_more_link;
 	} else {
 		$excerpt = implode(' ', $words);

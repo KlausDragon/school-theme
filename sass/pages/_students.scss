@@ -1,0 +1,78 @@
+
+// archive-school-student styles first
+
+section.school-students {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 1rem 2.5rem;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    a,
+    a:visited {
+        color: #003c71;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+
+}
+
+article.individual-student {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    text-align: start;
+
+    p.specialty{
+        text-align: start;
+    }
+}
+
+article.category-individual-student{
+    line-height: 1.3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 1.3rem;
+
+    p{
+        margin: 0;
+    }
+
+    .student-name {
+        width: 100%;
+    }
+
+    .student-description{
+        width: 70%;
+        padding: 0 .8rem;
+    }
+
+    .student-image {
+        width: 30%;
+
+        img{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+        }
+    }
+
+    .nonexistent-page{
+        padding-top: 1.5rem;
+    }
+}
+
+
+
+

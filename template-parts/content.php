@@ -10,6 +10,10 @@
 
 ?>
 
+<?php if (is_home()) : ?>
+	<h2>News</h2>
+<?php endif; ?>
+
 <article data-aos="fade-in" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php

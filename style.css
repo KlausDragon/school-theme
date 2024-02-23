@@ -402,7 +402,6 @@ header.site-header#masthead {
 
 main.site-main#primary {
 	grid-area: main;
-	margin-top: 4.5rem;
 }
 
 .site-footer {
@@ -411,6 +410,10 @@ main.site-main#primary {
 
 aside.widget-area#secondary {
 	grid-area: sidebar;
+}
+
+a {
+	text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -779,16 +782,20 @@ header.site-header .site-header .site-title {
 	text-transform: uppercase;
 	margin: 0.4rem 1rem 0;
 }
-header.site-header .site-header .site-title a {
-	background-color: transparent;
-	padding: 0 0.5rem;
-}
 header.site-header .site-header .site-title p.site-title,
 header.site-header .site-header .site-title .site-title a {
 	margin: 0 3rem;
 	text-decoration: none;
 	display: block;
 	color: #fff;
+}
+header.site-header .site-header .site-title header.site-header p.site-title,
+header.site-header .site-header .site-title header.site-header p.site-title a {
+	color: white;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
 }
 header.site-header nav.main-navigation#site-navigation {
 	display: block;
@@ -1042,10 +1049,6 @@ main.homepage .site-main {
 	padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
-section.home-top {
-	margin: 2rem;
-}
-
 div.home-left-right-container {
 	margin: 1rem;
 	text-align: center;
@@ -1054,11 +1057,18 @@ div.home-left-right-container {
 
 article.blog-article {
 	margin: 0 1rem;
+	text-align: center;
+	text-decoration: none;
+	background-color: rgba(217, 217, 217, 0.7254901961);
+	padding: 0.5rem;
+}
+article.blog-article a {
+	text-decoration: none;
 }
 
 section.home-bottom {
 	margin: 2rem;
-	text-align: center;
+	text-align: left;
 	padding: 1rem 0;
 }
 
@@ -1089,6 +1099,255 @@ section.home-news {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+	}
+}
+section.school-students {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	max-width: 100%;
+	margin: 1rem 2.5rem;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+section.school-students a,
+section.school-students a:visited {
+	color: #003c71;
+}
+section.school-students a:hover {
+	text-decoration: underline;
+}
+
+article.individual-student {
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem;
+	text-align: start;
+}
+article.individual-student p.specialty {
+	text-align: start;
+}
+
+article.category-individual-student {
+	line-height: 1.3rem;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-bottom: 1.3rem;
+}
+article.category-individual-student p {
+	margin: 0;
+}
+article.category-individual-student .student-name {
+	width: 100%;
+}
+article.category-individual-student .student-description {
+	width: 70%;
+	padding: 0 0.8rem;
+}
+article.category-individual-student .student-image {
+	width: 30%;
+}
+article.category-individual-student .student-image img {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+article.category-individual-student .nonexistent-page {
+	padding-top: 1.5rem;
+}
+
+main.staff-page#primary {
+	margin-left: 3rem;
+	margin-right: 3rem;
+}
+
+a,
+a:visited {
+	color: #003c71;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+@media only screen and (min-width: 38em) {
+	section.admin-container,
+	section.instructor-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 2rem;
+	}
+	section.admin-container h2,
+	section.instructor-container h2 {
+		width: 100%;
+	}
+	section.admin-container .instructor-staff,
+	section.admin-container .admin-staff,
+	section.instructor-container .instructor-staff,
+	section.instructor-container .admin-staff {
+		width: 48%;
+		margin: 0;
+	}
+}
+header.site-header {
+	width: 100%;
+	height: 55px;
+	background-color: #000000;
+	border-top: 3px solid #305c9f;
+	position: fixed;
+	top: 10;
+	left: 0;
+	z-index: 9999;
+}
+header.site-header .main-navigation li.current-menu-item > a,
+header.site-header .main-navigation li.current_page_item > a,
+header.site-header .main-navigation li:hover > a,
+header.site-header .main-navigation li.focus > a,
+header.site-header .main-navigation li:active > a {
+	background-color: #305c9f;
+}
+header.site-header .site-header .site-title {
+	width: 200px;
+	font-size: 1.3em;
+	text-transform: uppercase;
+	margin: 0.4rem 1rem 0;
+}
+header.site-header .site-header .site-title p.site-title,
+header.site-header .site-header .site-title .site-title a {
+	margin: 0 3rem;
+	text-decoration: none;
+	display: block;
+	color: #fff;
+}
+header.site-header .site-header .site-title header.site-header p.site-title,
+header.site-header .site-header .site-title header.site-header p.site-title a {
+	color: white;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+}
+header.site-header nav.main-navigation#site-navigation {
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: 52px;
+	right: 0;
+	z-index: 1000;
+}
+header.site-header button.menu-toggle {
+	display: block;
+	width: 46px;
+	height: 46px;
+	margin: 0;
+	padding: 0;
+	font-size: 0.9em;
+	color: #fff;
+	position: absolute;
+	right: 1rem;
+	z-index: 1100;
+	top: -3rem;
+	border: none;
+	box-shadow: none;
+	text-shadow: none;
+	text-decoration: none;
+	cursor: pointer;
+	background: transparent;
+}
+header.site-header .main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	background-color: #000000;
+}
+header.site-header .main-navigation li {
+	position: relative;
+}
+header.site-header .main-navigation.toggled ul {
+	display: block;
+}
+header.site-header .main-navigation a {
+	padding: 1rem;
+	display: block;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	font-weight: 700;
+	color: white;
+	text-transform: uppercase;
+}
+header.site-header .main-navigation.toggled ul {
+	display: block;
+}
+header.site-header .main-navigation ul ul {
+	background-color: #3d3d3d;
+	width: 100%;
+	text-align: center;
+}
+header.site-header .main-navigation ul ul a {
+	width: auto;
+}
+
+@media screen and (min-width: 50em) {
+	header.site-header {
+		display: grid;
+		grid-template-columns: 1fr minmax(auto, 12.5rem) minmax(auto, 50rem) 1fr;
+		align-items: center;
+	}
+	header.site-header .site-title {
+		grid-column: 2/3;
+		margin: 0 3rem;
+	}
+	header.site-header nav.main-navigation#site-navigation {
+		grid-column: 3/4;
+		position: relative;
+		top: 0;
+		align-self: center;
+		margin-left: auto;
+		height: 52px;
+		line-height: 52px;
+		width: auto;
+	}
+	header.site-header button.menu-toggle {
+		display: none;
+	}
+	header.site-header .main-navigation ul, header.site-header .main-navigation.toggled ul {
+		display: flex;
+		justify-content: flex-end;
+	}
+	header.site-header .main-navigation ul li:hover > ul,
+	header.site-header .main-navigation ul li.focus > ul, header.site-header .main-navigation.toggled ul li:hover > ul,
+	header.site-header .main-navigation.toggled ul li.focus > ul {
+		left: auto;
+	}
+	header.site-header .main-navigation a {
+		padding: 0 1rem;
+	}
+	header.site-header .main-navigation ul ul {
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		float: left;
+		position: absolute;
+		top: 100%;
+		left: -999em;
+		z-index: 99999;
+		background-color: #111;
+		flex-direction: column;
+		width: auto;
+	}
+	header.site-header .main-navigation ul ul a {
+		left: -999em;
+		top: 0;
+		width: 200px;
+		text-align: left;
 	}
 }
 /*# sourceMappingURL=sass/style.css.map */

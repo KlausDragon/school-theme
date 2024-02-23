@@ -38,7 +38,7 @@ header.site-header#masthead {
 
 main.site-main#primary {
 	grid-area: main;
-	margin-top: 4.5rem;
+	// margin-top: 4.5rem; for visual styling feedback avoiding admin bar
 }
 
 .site-footer {
@@ -47,4 +47,18 @@ main.site-main#primary {
 
 aside.widget-area#secondary {
     grid-area: sidebar;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+header.site-header p.site-title,
+header.site-header p.site-title a {
+	color: white;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
 }
