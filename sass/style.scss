@@ -107,14 +107,4 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "pages/pages";
 
-// I have no idea why the styling home link is always not applying.
-// Last attempt here worked. 
-// - Better styled than not.
-header.site-header p.site-title,
-header.site-header p.site-title a {
-	color: white;
-	font-size: 1.5rem;
-	text-transform: uppercase;
-	text-decoration: none;
-	font-weight: bold;
-}
+
