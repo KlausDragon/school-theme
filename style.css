@@ -868,6 +868,12 @@ header.site-header .main-navigation ul ul a {
   }
   header.site-header .site-title {
     grid-column: 2/3;
+  }
+  header.site-header p.site-title,
+  header.site-header p.site-title a {
+    margin: 0;
+  }
+  header.site-header p.site-title {
     margin: 0 3rem;
   }
   header.site-header nav.main-navigation#site-navigation {
@@ -1259,11 +1265,11 @@ aside.widget-area#secondary [type=button], aside.widget-area#secondary [type=res
   margin: 0;
   background-color: #305c9f;
   color: white;
-  width: 280px;
+  width: 200px;
   padding: 0.8rem;
 }
 aside.widget-area#secondary input[type=search] {
-  width: 280px;
+  width: 200px;
 }
 aside.widget-area#secondary a {
   font-weight: bold;

@@ -119,9 +119,17 @@ header.site-header  {
     
         .site-title {
             grid-column: 2/3;
+        }
+        
+        p.site-title,
+        p.site-title a {
+            margin: 0;
+        }
+        
+        p.site-title {
             margin: 0 3rem;
         }
-    
+
         nav.main-navigation#site-navigation {
             grid-column: 3/4;
             position: relative;
