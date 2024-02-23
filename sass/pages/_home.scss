@@ -1,12 +1,10 @@
-
-
 main.homepage .site-main {
     padding: .5rem 1rem .5rem 1rem;
 }
 
-// section.home-top {
-//     margin: 2rem; for visual styling feedback avoiding admin bar
-// }
+section.home-top {
+    margin: 0 2rem;
+}
 
 
 div.home-left-right-container{
@@ -17,15 +15,37 @@ div.home-left-right-container{
 }
 
 article.blog-article{
-    margin: 0 1rem;
+    margin: 1rem;
     text-align: center;
     text-decoration: none;
-    background-color: #d9d9d9b9;
+    background-color: black;
     padding: .5rem;
     a{
     text-decoration: none;
     }
+    position: relative;
+    
+    div.latest-blog-teaser {
+        position: relative;
+    }
+    
+    .blog-teaser-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.725);
+        padding: 10px;
+        box-sizing: border-box; 
+    }
+    
+    .blog-teaser-text h3 {
+        margin: 0; 
+        font-size: 1.2rem;
+    }
+
 }
+
 
 section.home-bottom {
     margin: 2rem;
@@ -35,6 +55,10 @@ section.home-bottom {
 
 section.home-news {
     margin: 2rem;
+    
+    .see-all-news-link a {
+        padding-top: 1rem;
+    }
 }
 
 @media screen and (min-width: 50em) {
@@ -45,10 +69,7 @@ section.home-news {
         grid-template-areas:
         "left right";
     }
-    // "figure2 figure2"
-    // "bottom bottom"
-    // "news news";
-    
+
     section.home-left {
         grid-area: left;
         padding: .8rem;
@@ -64,14 +85,6 @@ section.home-news {
         padding: .8rem;
         text-align: center;
     }
-    
-    // figure.wp-image-12 {
-    //     grid-area: figure2;
-    // }
-    
-    // section.home-bottom {
-    //     grid-area: bottom;
-    // }
     
     div.home-news-container {
         display: flex;

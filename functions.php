@@ -238,3 +238,10 @@ function custom_student_title_placeholder($title_placeholder, $post) {
     return $title_placeholder;
 }
 add_filter('enter_title_here', 'custom_student_title_placeholder', 10, 2);
+
+
+function remove_edit_link($link) {
+    return '';
+}
+add_filter('edit_post_link', 'remove_edit_link');
+

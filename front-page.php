@@ -123,15 +123,14 @@ get_header();
 							?>
 							<article class="blog-article">
 								<a href="<?php the_permalink(); ?>">
-									<?php
-									the_post_thumbnail('latest-blog-teaser');
-									?>
-									<h3>
-										<?php the_title(); ?>
-									</h3>
-									<p>
-										<?php echo get_the_date('F j, Y'); ?>
-									</p>
+									<div class="latest-blog-teaser">
+										<?php the_post_thumbnail('latest-blog-teaser'); ?>
+										<div class="blog-teaser-text">
+											<h3>
+												<?php the_title(); ?>
+											</h3>
+										</div>
+									</div>
 								</a>
 							</article>
 							<?php
@@ -145,9 +144,7 @@ get_header();
 						href="<?php echo esc_url(__('https://emilyhe.ca/school/news', 'school')); ?>">See all News
 					</a>
 				</strong>
-
 			</section>
-
 			<?php
 	endwhile; // End of the loop.
 	?>
