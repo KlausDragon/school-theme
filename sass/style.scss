@@ -110,4 +110,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 // I have no idea why the styling home link is always not applying.
 // Last attempt here worked. 
 // - Better styled than not.
-@import "components/navigation/header";
+header.site-header p.site-title,
+header.site-header p.site-title a {
+	color: white;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+}
