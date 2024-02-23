@@ -603,10 +603,10 @@ input[type=submit] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
+  background: #305c9f;
+  color: white;
   line-height: 1;
-  padding: 0.6em 1em 0.4em;
+  padding: 0.8rem;
 }
 button:hover,
 input[type=button]:hover,
@@ -1256,6 +1256,14 @@ main.index#primary article .tags-links,
 main.index#primary article .comments-link {
   margin: 0 0.5rem;
 }
+main.index#primary p.form-submit input#submit.submit,
+main.index#primary [type=button], main.index#primary [type=reset], main.index#primary [type=submit] {
+  margin: 0;
+  background-color: #305c9f;
+  color: white;
+  width: 200px;
+  padding: 0.8rem;
+}
 
 aside.widget-area#secondary {
   margin: 0 1rem;
@@ -1263,7 +1271,7 @@ aside.widget-area#secondary {
 aside.widget-area#secondary button.wp-block-search__button wp-element-button,
 aside.widget-area#secondary [type=button], aside.widget-area#secondary [type=reset], aside.widget-area#secondary [type=submit] {
   margin: 0;
-  background-color: #305c9f;
+  background: #305c9f;
   color: white;
   width: 200px;
   padding: 0.8rem;

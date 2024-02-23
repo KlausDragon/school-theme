@@ -16,6 +16,15 @@ main.index#primary {
             margin: 0 .5rem;
         }
     }
+
+    p.form-submit input#submit.submit, 
+    [type=button], [type=reset], [type=submit] {
+        margin: 0;
+        background-color: #305c9f;
+        color: white;
+        width: 200px;
+        padding: .8rem;
+    }
 }
 
 aside.widget-area#secondary {
@@ -25,7 +34,7 @@ aside.widget-area#secondary {
     button.wp-block-search__button wp-element-button, 
     [type=button], [type=reset], [type=submit] {
         margin: 0;
-        background-color: #305c9f;
+        background: #305c9f;
         color: white;
         width: 200px;
         padding: .8rem;
