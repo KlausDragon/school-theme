@@ -57,7 +57,7 @@
         echo '<strong><a href="' . home_url() . '/nonexistent-page">' . get_the_title() . ' Portfolio</a></strong>';
         ?>
 
-        <div class="category-students">
+        <div class="other-students">
             <?php
             $terms = wp_get_post_terms(get_the_ID(), 'school-student-category', array("fields" => "all"));
             $current_term_name = !empty($terms) && is_array($terms) ? $terms[0]->name : 'developers';
@@ -101,6 +101,7 @@
             )
         );
         ?>
+
     </div><!-- .entry-content -->
 
     <footer class="entry-footer">

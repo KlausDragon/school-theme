@@ -1,23 +1,87 @@
 .sticky {
-	display: block;
+  display: block;
 }
 
 .post,
 .page {
-	margin: 0;
+  margin: 0;
 }
 
 .updated:not(.published) {
-	display: none;
+  display: none;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+  margin: 1.5em 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+article.school-student {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+
+  .post-thumbnail {
+    float: right;
+    margin-left: 20px;
+
+    img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+
+  .entry-content {
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    strong {
+      a {
+        display: inline-block;
+        background-color: #000000;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        margin-top: 20px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .other-students {
+    margin-top: 40px;
+    h3 {
+      font-size: 20px;
+      color: #333333;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        a {
+          display: block;
+          color: #0d1a7d;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 }

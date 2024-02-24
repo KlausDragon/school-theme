@@ -1,4 +1,5 @@
 footer.site-footer {
+  margin-top: 1rem;
   background-color: #333333;
   color: white;
   ul {
@@ -40,6 +41,7 @@ footer.site-footer {
       display: flex;
       justify-content: space-around;
       padding: 20px 0;
+      text-align: left;
     }
   }
 }

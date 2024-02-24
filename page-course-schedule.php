@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying Schedule page
  *
@@ -15,10 +16,10 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main">
+<main id="primary" class="site-main page-schedule">
 
 	<?php
-	while (have_posts()):
+	while (have_posts()) :
 		the_post();
 
 		get_template_part('template-parts/content', 'page');
@@ -28,7 +29,7 @@ get_header();
 			echo '<caption>Weekly Course Schedule</caption>';
 			echo '<thead><tr>';
 
-			while (have_rows('weekly_course_schedule')):
+			while (have_rows('weekly_course_schedule')) :
 				the_row();
 
 				$date_label = get_sub_field_object('date')['label'];
@@ -39,13 +40,13 @@ get_header();
 				echo '<th>' . esc_html($date_label) . '</th>';
 				echo '<th>' . esc_html($course_label) . '</th>';
 				echo '<th>' . esc_html($instructor_label) . '</th>';
-				break; 
+				break;
 			endwhile;
 
 			echo '</tr></thead>';
 			echo '<tbody>';
 
-			while (have_rows('weekly_course_schedule')):
+			while (have_rows('weekly_course_schedule')) :
 				the_row();
 
 				$date = get_sub_field('date');
@@ -65,7 +66,7 @@ get_header();
 			echo '</tbody></table>';
 		}
 
-	endwhile; 
+	endwhile;
 	?>
 
 </main><!-- #primary -->
